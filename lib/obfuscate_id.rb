@@ -21,9 +21,9 @@ module ObfuscateId
       scope = args.slice!(0)
       options = args.slice!(0) || {}
       if has_obfuscated_id? && !options[:no_obfuscated_id]
-        if scope.is_a?(Array)
+        if scope.is_a?(Array) && !scope.first.is_a?(Fixnum)
           scope.map! {|a| deobfuscate_id(a).to_i}
-        else
+        elsif !scope.first.is_a?(Fixnum)
           scope = deobfuscate_id(scope)
         end
       end
