@@ -17,14 +17,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "scatter_swap",    "~> 0.0.3"
-  s.add_dependency "rails",           "~> 4.1.8"
+  s.add_dependency "rails",           "~> 4.2.0"
 
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails"
-  s.add_development_dependency "capybara"
-  s.add_development_dependency "guard-rspec"
-  s.add_development_dependency "guard-spork"
-  s.add_development_dependency "rb-inotify"
-  s.add_development_dependency "pry"
-  s.add_development_dependency "launchy"
 end
