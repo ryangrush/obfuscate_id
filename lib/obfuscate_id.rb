@@ -9,11 +9,11 @@ module ObfuscateId
   end
 
   def self.hide(id, spin)
-    Hashids.new(spin.to_s).encode(id)
+    Hashids.new(spin.to_s, 20).encode(id)
   end
 
   def self.show(id, spin)
-    Hashids.new(spin.to_s).decode(id).first
+    Hashids.new(spin.to_s, 20).decode(id).first
   end
 
   module ClassMethods
